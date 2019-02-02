@@ -8,28 +8,51 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, GameViewDelegate {
     
     private let size = 4
     private lazy var game = Game(size: size)
     
+    @IBOutlet weak var gmaView: GameView! {
+        didSet {
+            gmaView.size = size
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        game.start()
-        game.debugPrint()
-        game.move(.down)
-        game.debugPrint()
-        game.move(.up)
-        game.debugPrint()
-        game.move(.left)
-        game.debugPrint()
-        game.move(.right)
-        game.debugPrint()
-        // Do any additional setup after loading the view, typically from a nib.
+        gmaView.delegate = self
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500)){
+            self.startGame()
+        }
     }
-
+    
+    private func startGame(){
+        self.game.start{ (startCards) in
+            self.gmaView.performActions(startCards)
+            
+        }
+    }
+    
+    func slideEnded(offset: CGPoint) {
+        let direction: Direction
+        if offset.y > offset.x{
+            if offset.y > -offset.x{
+                direction = .down
+            } else {
+              direction = .left
+            }
+        } else {
+            if offset.y > -offset.x{
+                direction = .right
+            } else {
+                direction = .up
+            }
+        }
+        
+        game.move(direction){ (actions) in
+            gmaView.performActions(actions)
+        }
+    }
 
 }
 
