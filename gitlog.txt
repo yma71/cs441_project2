@@ -1,0 +1,58 @@
+commit 2fa4d8a7d711043b4d8e8bc7566753bc34e85b14
+Author: 马演喆 <mayanzhe@mayanzhedeMac.local>
+Date:   Tue Feb 12 07:09:12 2019 -0800
+
+    p2
+
+ README.md | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit 774472c332c79b2dc515070ad69a2dedd40871ad
+Author: 马演喆 <mayanzhe@mayanzhedeMac.local>
+Date:   Sat Feb 2 08:32:13 2019 -0800
+
+    p2
+
+ 2048/2048.xcodeproj/project.pbxproj                |  12 +-
+ .../UserInterfaceState.xcuserstate                 | Bin 23890 -> 29293 bytes
+ 2048/2048/Controller/ViewController.swift          |  51 +++++--
+ 2048/2048/View/Base.lproj/Main.storyboard          |  27 +++-
+ 2048/2048/View/CardView.swift                      |  84 ++++++++++-
+ 2048/2048/View/GameView.swift                      | 164 +++++++++++++++++++++
+ 6 files changed, 315 insertions(+), 23 deletions(-)
+
+commit e4b4caab4e26f58872d63183fb3acfa6effca4d2
+Author: 马演喆 <mayanzhe@mayanzhedeMac.local>
+Date:   Thu Jan 31 08:12:39 2019 -0800
+
+    p2
+
+ .DS_Store                                          | Bin 0 -> 6148 bytes
+ 2048/.DS_Store                                     | Bin 0 -> 6148 bytes
+ 2048/2048.xcodeproj/project.pbxproj                | 387 +++++++++++++++++++++
+ .../project.xcworkspace/contents.xcworkspacedata   |   7 +
+ .../xcshareddata/IDEWorkspaceChecks.plist          |   8 +
+ .../UserInterfaceState.xcuserstate                 | Bin 0 -> 23890 bytes
+ .../xcschemes/xcschememanagement.plist             |  14 +
+ 2048/2048/.DS_Store                                | Bin 0 -> 6148 bytes
+ 2048/2048/Controller/ViewController.swift          |  35 ++
+ 2048/2048/Info.plist                               |  45 +++
+ 2048/2048/Model/Action.swift                       |  17 +
+ 2048/2048/Model/Card.swift                         |  27 ++
+ 2048/2048/Model/Game.swift                         | 180 ++++++++++
+ 2048/2048/Supporting/AppDelegate.swift             |  46 +++
+ .../AppIcon.appiconset/Contents.json               |  98 ++++++
+ 2048/2048/View/Assets.xcassets/Contents.json       |   6 +
+ 2048/2048/View/Base.lproj/LaunchScreen.storyboard  |  25 ++
+ 2048/2048/View/Base.lproj/Main.storyboard          |  24 ++
+ 2048/2048/View/CardView.swift                      |   9 +
+ 19 files changed, 928 insertions(+)
+
+commit a5d2ca5cabbf80f7ff37721f0da25095759c1970
+Author: yma71 <31296106+yma71@users.noreply.github.com>
+Date:   Thu Jan 31 09:14:25 2019 -0500
+
+    Initial commit
+
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
